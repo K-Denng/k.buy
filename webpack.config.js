@@ -1,8 +1,8 @@
 /*
 * @Author: K_Denng
 * @Date:   2017-07-26 18:45:37
-* @Last Modified by:   K_Denng
-* @Last Modified time: 2017-07-27 23:50:53
+* @Last Modified by:   k_denng
+* @Last Modified time: 2017-07-30 14:55:45
 */
 
 'use strict';
@@ -21,13 +21,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  * @param  {[type]} name [description]
  * @return {[type]}      [description]
  */
-const getHtmlConfig = function(name){
+const getHtmlConfig = function(name,title){
   return {
     // 原始模板
     template: './src/view/'+name+'.html',
     // 目标文件位置
     filename: 'view/'+name+'.html',
-
+    title: title,
     inject: true,
     hash: true,
 
@@ -41,21 +41,25 @@ var config = {
   entry: {
     common: './src/page/common/index.js',
     index: './src/page/index/index.js',
-    login: './src/page/login/index.js'
+    login: './src/page/login/index.js',
+    result: './src/page/result/index.js'
   },
   // 入口文件的输出配置,配置多个目标输出文件
   output: {
-    // path: __dirname + '/dist',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
     filename: 'js/[name].js'
   },
   externals : {
     // 引用第三方库作为全局变量
-    jquery : 'window.jQuery'
+    jquery : 'window.jQuery',
+    artTemplate: 'window.template'
   },
+
+  // 关于模块配置
   module: {
     rules: [
+    // 模块规则（配置 loader、解析器等选项）
       // {
       //   test: /\.css$/,
       //   use: ExtractTextPlugin.extract({
@@ -84,7 +88,26 @@ var config = {
           }
         ]
       },
+      {
+        test: /\.art$/,
+        loader: "art-template-loader",
+        },
     ]
+  },
+
+  node: {
+    fs: 'empty'
+  },
+
+  // 解析模块请求的选项
+  resolve: {
+    // 模块别名列表
+    alias: {
+      util: path.resolve(__dirname , 'src/util/'),
+      page: path.resolve(__dirname , 'src/page/'),
+      service: path.resolve(__dirname , 'src/service/'),
+      images: path.resolve(__dirname , 'src/images/')
+    }
   },
   // 插件项
   plugins: [
@@ -120,8 +143,9 @@ var config = {
       chunks: ['common','index'],
     }),*/
 
-    new HtmlWebpackPlugin(getHtmlConfig('index')),
-    new HtmlWebpackPlugin(getHtmlConfig('login')),
+    new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+    new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
   ]
   
 }

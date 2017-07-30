@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="">
-</head>
+  <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %> - k.buy电商平台demo</title>
+  </head>
 <body>
-  <div class="text"></div>
-  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <%= require('html-loader!./layout/nav.html') %>
+  <%= require('html-loader!./layout/head-search.html') %>
+
+  <div class="page-wrap w">
+    <%= require('html-loader!./layout/nav-side.html') %>
+    <div class="content nav-width"></div>
+  </div>
+  <div class="loading"></div>
+  <i class="fa fa-user" aria-hidden="true"></i>
+  <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>
