@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %> -- k.buy电商平台demo</title>
+  </head>
+<body>
+  <%= require('html-loader!./layout/nav.html') %>
+  <%= require('html-loader!./layout/head-search.html') %>
+    <div class="page-wrap">
+      <div class="user-content">
+        <div class="user-title">新用户注册</div>
+        <div class="user-box">
+          <div class="user-status error">
+            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+            <span></span>
+          </div>
+          <div class="user-item">
+            <label class="user-label" for="username">
+              <i class="fa fa-user"></i>
+            </label>
+            <input class="user-input" type="text" name="" id="username" placeholder="输入用户名" autocomplete="off" autofocus="autofocus">
+          </div>
+
+          <div class="user-item">
+            <label class="user-label" for="password">
+              <i class="fa fa-lock"></i>
+            </label>
+            <input class="user-input" type="password" name="" id="password" placeholder="输入密码" autocomplete="off" autofocus="autofocus">
+          </div>
+
+          <div class="user-item">
+            <label class="user-label" for="passwordAgain">
+              <i class="fa fa-lock"></i>
+            </label>
+            <input class="user-input" type="password" name="" id="passwordAgain" placeholder="再次输入密码" autocomplete="off" autofocus="autofocus">
+          </div>
+
+          <div class="user-item">
+            <label class="user-label" for="phone">
+              <i class="fa fa-phone"></i>
+            </label>
+            <input class="user-input" type="tel" name="" id="phone" placeholder="电话" autocomplete="off" autofocus="autofocus">
+          </div>
+
+          <div class="user-item">
+            <label class="user-label" for="email">
+              <i class="fa fa-envelope"></i>
+            </label>
+            <input class="user-input" type="email" name="" id="email" placeholder="邮箱地址" autocomplete="off" autofocus="autofocus">
+          </div>
+
+          <div class="user-item">
+            <label class="user-label" for="question">
+              <i class="fa fa-question"></i>
+            </label>
+            <input class="user-input" type="text" name="" id="question" placeholder="密码提示问题" autocomplete="off" autofocus="autofocus">
+          </div>
+
+          <div class="user-item">
+            <label class="user-label" for="answer">
+              <i class="fa fa-key"></i>
+            </label>
+            <input class="user-input" type="text" name="" id="answer" placeholder="密码提示答案" autocomplete="off" autofocus="autofocus">
+          </div>
+  
+
+          <a class="btn btn-submit" >立即注册</a>
+          <div class="link-item">
+            <!-- <a href="" class="link" target="_blank">忘记密码</a> -->
+            <a href="./user-login.html" class="link" target="_blank">已有账号，去登陆 &gt;&gt;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

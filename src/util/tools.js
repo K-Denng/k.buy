@@ -2,7 +2,7 @@
 * @Author: K_Denng
 * @Date:   2017-07-28 07:19:23
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-07-30 12:30:16
+* @Last Modified time: 2017-08-01 11:08:49
 */
 // 通用工具
 'use strict';
@@ -38,7 +38,7 @@ var tools = {
         }
       },
       error: function(err){
-        typeof param.error === 'function' && param.error(result.statusText);
+        typeof param.error === 'function' && param.error(err.statusText);
       }
     })
   },
@@ -49,7 +49,7 @@ var tools = {
    * @return {[type]} [description]
    */
   toLogin: function(){
-    window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+    window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
   },
   /**
    * 回到首页处理

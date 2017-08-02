@@ -2,7 +2,7 @@
 * @Author: K_Denng
 * @Date:   2017-07-26 18:45:37
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-07-30 14:55:45
+* @Last Modified time: 2017-08-02 13:13:43
 */
 
 'use strict';
@@ -39,10 +39,15 @@ const getHtmlConfig = function(name,title){
 var config = {
   // 页面入口文件配置,配置多个目标源文件
   entry: {
-    common: './src/page/common/index.js',
-    index: './src/page/index/index.js',
-    login: './src/page/login/index.js',
-    result: './src/page/result/index.js'
+    'common': './src/page/common/index.js',
+    'index': './src/page/index/index.js',
+    'user-login': './src/page/user-login/index.js',
+    'user-center': './src/page/user-center/index.js',
+    'user-center-update': './src/page/user-center-update/index.js',
+    'user-register': './src/page/user-register/index.js',
+    'user-password-reset': './src/page/user-password-reset/index.js',
+    'user-password-update': './src/page/user-password-update/index.js',
+    'result': './src/page/result/index.js'
   },
   // 入口文件的输出配置,配置多个目标输出文件
   output: {
@@ -91,7 +96,11 @@ var config = {
       {
         test: /\.art$/,
         loader: "art-template-loader",
-        },
+      },
+      {
+        test: /\.string$/,
+        loader: "html-loader",
+      },
     ]
   },
 
@@ -144,7 +153,12 @@ var config = {
     }),*/
 
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-    new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-register','新用户注册')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-password-reset','找回密码')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-password-update','修改密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
   ]
   
