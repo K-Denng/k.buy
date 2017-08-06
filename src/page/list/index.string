@@ -1,0 +1,12 @@
+{{#list}}
+  <li class="list-item">
+    <a class="link" href="./detail.html?productId={{id}}" target="_blank">
+      <img class="product-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"></img>
+      <span class="price">￥{{price}}</span>
+      <p class="name">{{name}}</p>
+    </a>
+  </li>
+{{/list}}
+{{^list}}
+  <p class="error">抱歉，您要找的商品已没有库存。。</p>
+{{/list}}

@@ -1,0 +1,128 @@
+.keyword-list {
+  float: left;
+  padding-top: 20px;
+  width: 230px;
+  height: 350px;
+  background-color: #236dc9;
+  .keyword-item {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    &:hover {
+      background-color: #28a7ff;
+    }
+    a {
+      display: inline-block;
+      color: #eee;
+      padding-left: 10px;
+      font-style: 18px;
+      &:hover {
+        color: #444;
+      }
+    }
+  }
+}
+
+.banner-content {
+  position: relative;
+  width: 830px;
+  height: 370px;
+  float: right;
+  background-color: #fff;
+  .loading {
+    margin-top: 85px;
+  }
+  .banner-img {
+    width: 100%;
+    height: 100%;
+  }
+  .unslider {
+    height: 100%;
+    .unslider-horizontal {
+      height: 100%;
+      .unslider-wrap {
+        height: 100%;
+        li {
+          height: 100%;
+          a {
+            height: 100%;
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .unslider-arrow {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    line-height: 100px;
+    left: 0;
+    top: 50%;
+    margin-top: -50px;
+    text-align: center;
+    background-color: #999;
+    color: #333;
+    opacity: 0.3;
+    &:hover {
+      opacity: 0.6;
+    }
+    &.next {
+      right: 0;
+    }
+  }
+  .unslider-nav {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.4);
+  }
+}
+
+.floor-wrap {
+  margin: 20px auto;
+  overflow: hidden;
+  .floor-title {
+    color: #236dc9;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #236dc9;
+  }
+  .floor-list {
+    width: 1200px;
+
+    .floor-item {
+      position: relative;
+      width: 200px;
+      height: 220px;
+      float: left;
+      margin-right: 20px;
+      background-color: #fff;
+      &:hover {
+        box-shadow: 2px 1px 7px #ddd;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        .floor-text {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          font-size: 18px;
+          color: #999;
+        }
+        img {
+          position: absolute;
+          bottom: 15px;
+          left: 25px;
+          width: 75%;
+          
+        }
+      }
+    }
+  }
+}

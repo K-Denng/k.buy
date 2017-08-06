@@ -2,7 +2,7 @@
 * @Author: K_Denng
 * @Date:   2017-07-26 18:45:37
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-02 13:13:43
+* @Last Modified time: 2017-08-05 15:30:09
 */
 
 'use strict';
@@ -41,6 +41,8 @@ var config = {
   entry: {
     'common': './src/page/common/index.js',
     'index': './src/page/index/index.js',
+    'list': './src/page/list/index.js',
+    'detail': './src/page/detail/index.js',
     'user-login': './src/page/user-login/index.js',
     'user-center': './src/page/user-center/index.js',
     'user-center-update': './src/page/user-center-update/index.js',
@@ -88,7 +90,8 @@ var config = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: 'images/[name]_[hash:7].[ext]'
+              // name: 'images/[name]_[hash:7].[ext]'
+              name: 'images/[name].[ext]',
             }
           }
         ]
@@ -153,6 +156,8 @@ var config = {
     }),*/
 
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+    new HtmlWebpackPlugin(getHtmlConfig('list','商品列表')),
+    new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),

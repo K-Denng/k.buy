@@ -2,7 +2,7 @@
 * @Author: K_Denng
 * @Date:   2017-07-28 07:19:23
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-01 11:08:49
+* @Last Modified time: 2017-08-03 22:34:42
 */
 // 通用工具
 'use strict';
@@ -13,7 +13,7 @@ var conf = {
 };
 var tools = {
   /**
-   * 网络请求
+   * 封装网络请求
    * @param  {[type]} param [description]
    * @return {[type]}       [description]
    */
@@ -70,6 +70,8 @@ var tools = {
 
   /**
    * 渲染HTML模板
+   * data为对象，对象属性为模板中的变量
+   * 属性值才是所需要的值
    * @param  {[type]} htmlTemplate [description]
    * @param  {[type]} data         [description]
    * @return {[type]}              [description]
@@ -103,7 +105,12 @@ var tools = {
   errorTips: function(msg){
     alert(msg||'好像哪里不对的样子～');
   },
-
+  /**
+   * 字符串验证
+   * @param  {[type]} value [description]
+   * @param  {[type]} type  [description]
+   * @return {[type]}       [description]
+   */
   validate: function(value,type){
     // 去除两边空格，并伴有强制转换为字符类型的功效
     var value = $.trim(value);
@@ -127,7 +134,7 @@ var tools = {
   getUrlParam: function(name){
     var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
     var result = window.location.search.substr(1).match(reg);
-    return result?result[2]:null;
+    return result?decodeURIComponent(result[2]):null;
   }
 
 };

@@ -2,7 +2,7 @@
 * @Author: k_denng
 * @Date:   2017-07-30 14:03:38
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-02 14:05:36
+* @Last Modified time: 2017-08-02 21:07:28
 */
 
 'use strict';
@@ -42,9 +42,15 @@ var navSide = {
     $.extend(this.data,{active:option});
     this.renderNav();
   },
+  /**
+   * 根据条件渲染
+   * @return {[type]} [description]
+   */
   renderNav: function(){
     var listLength = this.data.navList.length;
     for(var i=0;i<listLength;i++){
+      // 仅有当所输入的active字符串为数组中的name属性的时候才会带有true
+      // 渲染的时候通过判断是否为true进行区分渲染
       if(this.data.navList[i].name === this.data.active){
         this.data.navList[i].isActive = true;
       }

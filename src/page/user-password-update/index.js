@@ -2,7 +2,7 @@
 * @Author: k_denng
 * @Date:   2017-08-02 13:10:10
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-02 13:59:01
+* @Last Modified time: 2017-08-02 14:53:19
 */
 
 'use strict';
@@ -28,18 +28,15 @@ var page = {
         passwrodNew: $.trim($('#password-new').val()),
         passwordConfirm: $.trim($('#password-confirm').val())
       };
-      console.log(data);
       var validate = _this.formValidate(data);
       if(validate.status){
         _user.resetPassword({
           passwordOld: data.password,
           passwordNew: data.passwrodNew
         },function(result){
-          console.log('成功');
           _tools.successTips(result);
           window.location.href = './user-login.html';
         },function(errorMsg){
-          console.log('失败');
           _tools.errorTips(errorMsg);
         });
       }else{

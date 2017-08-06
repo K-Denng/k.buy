@@ -2,7 +2,7 @@
 * @Author: k_denng
 * @Date:   2017-07-28 23:20:00
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-01 08:48:28
+* @Last Modified time: 2017-08-03 22:27:34
 */
 
 'use strict';
@@ -20,7 +20,9 @@ var headSearch = {
    */
   onLoad: function(){
     var keyword = _tools.getUrlParam('keyword');
-    $('#search-input').val(keyword);
+    if(keyword){
+      $('#search-input').val(keyword);
+    }
   },
   bingEvent: function(){
     var _this = this;
@@ -59,3 +61,5 @@ var headSearch = {
 
 
 headSearch.init();
+
+
