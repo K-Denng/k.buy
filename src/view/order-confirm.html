@@ -16,17 +16,32 @@
       </div>
     </div>
   </div>
+
   <div class="page-wrap w">
-    <%= require('html-loader!./layout/nav-side.html') %>
-    <div class="content nav-width">
-      <div class="panner">
-        <div class="panner-title"><%= htmlWebpackPlugin.options.title %></div>
-        <div class="panner-body">
-          <div class="loading loading-sm"></div>
-        </div>
+
+    <div class="panel">
+      <div class="panel-title">收货地址</div>
+      <div class="panel-body address-content clearfix">
+        
       </div>
     </div>
+
+    <div class="panel">
+      <div class="panel-title">商品清单</div>
+      <div class="panel-body product-content">
+        
+      </div>
+    </div>
+    
+    <!-- 分页 -->
+    <div class="pagination"></div>
   </div>
+
+  <!-- 地址表单 -->
+  <div class="form-wrap">
+  </div>
+  
+
   <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>

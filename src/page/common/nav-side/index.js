@@ -2,7 +2,7 @@
 * @Author: k_denng
 * @Date:   2017-07-30 14:03:38
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-02 21:07:28
+* @Last Modified time: 2017-08-11 17:10:27
 */
 
 'use strict';
@@ -20,9 +20,9 @@ var navSide = {
         href:'./user-center.html'
       },
       {
-        name:'oder-list',
+        name:'order-list',
         describe:'我的订单',
-        href:'./oder-list.html'
+        href:'./order-list.html'
       },
       {
         name:'user-password-update',

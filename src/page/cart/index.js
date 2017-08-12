@@ -2,7 +2,7 @@
 * @Author: k_denng
 * @Date:   2017-08-06 20:50:18
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-07 16:08:38
+* @Last Modified time: 2017-08-07 21:57:31
 */
 
 'use strict';
@@ -136,7 +136,7 @@ var page = {
     $(document).on('click','.btn-submit',function(){
       // 仅当所存储的数据存在且总金额>0时有效
       if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-        window.location.href = './confirm.html';
+        window.location.href = './order-confirm.html';
       }else {
         _tools.errorTips('请选择商品后再提交');
       }

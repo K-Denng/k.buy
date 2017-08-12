@@ -2,7 +2,7 @@
 * @Author: K_Denng
 * @Date:   2017-07-26 18:45:37
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-06 20:49:45
+* @Last Modified time: 2017-08-12 17:38:41
 */
 
 'use strict';
@@ -44,6 +44,9 @@ var config = {
     'list': './src/page/list/index.js',
     'detail': './src/page/detail/index.js',
     'cart': './src/page/cart/index.js',
+    'order-confirm': './src/page/order-confirm/index.js',
+    'order-list': './src/page/order-list/index.js',
+    'order-detail': './src/page/order-detail/index.js',
     'user-login': './src/page/user-login/index.js',
     'user-center': './src/page/user-center/index.js',
     'user-center-update': './src/page/user-center-update/index.js',
@@ -160,6 +163,9 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('list','商品列表')),
     new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情')),
     new HtmlWebpackPlugin(getHtmlConfig('cart','购物车')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-confirm','订单确认')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-list','订单列表')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-detail','订单详情')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),

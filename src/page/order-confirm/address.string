@@ -1,0 +1,19 @@
+{{#list}}
+  <div class="address-item address-info" data-id='{{id}}'>
+    <div class="address-title">
+      {{receiverProvince}} {{receiverCity}} ({{receiverName}}收)
+    </div>
+    <div class="address-detail">
+      <p class="address-info">{{receiverAddress}}</p>
+      <p class="address-tel">{{receiverPhone}}</p>
+    </div>
+    <div class="address-opera">
+      <span class="link address-update">编辑</span>
+      <span class="link address-delete">删除</span>
+    </div>
+  </div>
+{{/list}}
+<div class="address-item add-address">
+  <i class="fa fa-plus"></i>
+  <p>添加新地址</p>
+</div>
