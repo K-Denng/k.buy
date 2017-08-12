@@ -1,0 +1,7 @@
+<div class="content">
+  <p>订单提交成功，请您尽快支付！ 订单号：{{orderNo}}</p>
+  <p class="text">请使用支付宝扫描如下二维码进行支付：</p>
+  <div class="img">
+    <img src="{{qrUrl}}" alt="请扫码支付">
+  </div>
+</div> 

@@ -18,7 +18,7 @@
     <div class="text">支付方式：{{paymentTypeDesc}}</div>
     {{#isCancel}}
     <div class="confirm">
-      <a href="./payment.html?orderNumber={{orderNo}}" class="btn btn-sm cancel-order">去支付</a>
+      <a href="./payment.html?orderNumber={{orderNo}}" class="btn btn-sm">去支付</a>
       <a class="btn btn-sm cancel-order">取消订单</a>
     </div>
     {{/isCancel}}

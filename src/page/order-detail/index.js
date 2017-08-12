@@ -2,7 +2,7 @@
 * @Author: k_denng
 * @Date:   2017-08-12 17:40:22
 * @Last Modified by:   k_denng
-* @Last Modified time: 2017-08-12 19:05:52
+* @Last Modified time: 2017-08-12 21:34:02
 */
 
 'use strict';
@@ -42,7 +42,6 @@ var page = {
     var html = '';
     $(document).on('click','.cancel-order',function(){
       if(window.confirm("你确定要取消订单吗？")){
-        _this.filter(result);
         _order.cancelOrder({
           orderNo: _this.data.orderNo
         },function(result){
